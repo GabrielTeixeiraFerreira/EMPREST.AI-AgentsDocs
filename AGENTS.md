@@ -15,6 +15,9 @@
 - Se os testes falharem, pare, analise o problema e explique a causa e o impacto. Só faça ajustes depois que o usuário aceitar.
 - Quando a tarefa afetar a verificação final, siga o checklist de `rules/check.md`.
 - Quando a tarefa afetar schema ou migration, siga o procedimento de `rules/migration.md`.
+- Para mudanças de produto ou código, siga o fluxo SDD definido em `rules/spec-flow.md`.
+- Para salvar o estado de uma sessão, siga a regra de handoff definida em `rules/handoff.md`.
+- Para criar ou alterar código, siga a matriz de testes definida em `rules/testing.md`.
 
 ## Arquitetura e código
 
@@ -27,4 +30,7 @@
 - Consulte `EMPREST.AI/docs/adr/001-stack.md` para as decisões de arquitetura, stack, testes, operação e segurança.
 - Consulte `rules/check.md` para o processo de verificação antes de afirmar que a tarefa está pronta.
 - Consulte `rules/migration.md` para qualquer mudança de schema ou migration.
+- Consulte `rules/spec-flow.md` para criar spec, plano e tasks antes de implementar.
+- Consulte `rules/handoff.md` para salvar uma sessão em `docs/handoff/` quando o usuário pedir.
+- Consulte `rules/testing.md` para escolher e executar os testes conforme a ADR.
 - No backend, preserve a organização por domínio e as camadas `Controller -> Service -> Repository` definidas no ADR.
