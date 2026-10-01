@@ -2,35 +2,34 @@
 
 ## Escopo
 
-- `EMPREST.AI/` contém o frontend.
-- `EMPREST.AI-Back/` contém o backend.
-- Antes de investigar ou alterar arquivos, pergunte ao usuário se o escopo é frontend ou backend.
+- `EMPREST.AI/` é o frontend.
+- `EMPREST.AI-Back/` é o backend.
+- Antes de investigar ou alterar arquivos, confirme com o usuário se o escopo é frontend, backend ou ambos.
 
-## Processo de trabalho
+## Prioridade operacional
 
-- Explique o plano antes de fazer alterações.
-- Responda em português.
-- Não crie commits nem pull requests; deixe essas ações para o usuário.
-- Ao concluir uma alteração, execute os testes como verificação obrigatória.
-- Se os testes falharem, pare, analise o problema e explique a causa e o impacto. Só faça ajustes depois que o usuário aceitar.
-- Quando a tarefa afetar a verificação final, siga o checklist de `rules/check.md`.
-- Quando a tarefa afetar schema ou migration, siga o procedimento de `rules/migration.md`.
-- Para mudanças de produto ou código, siga o fluxo SDD definido em `rules/spec-flow.md`.
-- Para salvar o estado de uma sessão, siga a regra de handoff definida em `rules/handoff.md`.
-- Para criar ou alterar código, siga a matriz de testes definida em `rules/testing.md`.
+1. Responda em português.
+2. Explique o plano antes de alterar o código.
+3. Prioridade máxima: o agente nunca cria commits, push, merge nem pull requests; essas ações ficam reservadas ao usuário.
+4. O agente pode preparar alterações em branch local e relatar o diff, mas não executa commit ou PR sem autorização explícita do usuário.
 
-## Arquitetura e código
+## Fluxo obrigatório
 
-- Use Arquitetura Limpa.
-- Siga os princípios SOLID.
+- Use Arquitetura Limpa e princípios SOLID.
+- Para mudanças de produto ou código, siga o fluxo SDD em `rules/spec-flow.md`.
+- Para validação final, siga `rules/check.md`.
+- Para alterações de schema ou migration, siga `rules/migration.md`.
+- Para testes, siga `rules/testing.md`.
+- Para handoff de sessão, siga `rules/handoff.md` somente quando o usuário pedir explicitamente.
 
 ## Referências do projeto
 
-- Consulte `EMPREST.AI/docs/PRD.md` para os requisitos do produto.
-- Consulte `EMPREST.AI/docs/adr/001-stack.md` para as decisões de arquitetura, stack, testes, operação e segurança.
-- Consulte `rules/check.md` para o processo de verificação antes de afirmar que a tarefa está pronta.
-- Consulte `rules/migration.md` para qualquer mudança de schema ou migration.
-- Consulte `rules/spec-flow.md` para criar spec, plano e tasks antes de implementar.
-- Consulte `rules/handoff.md` para salvar uma sessão em `docs/handoff/` quando o usuário pedir.
-- Consulte `rules/testing.md` para escolher e executar os testes conforme a ADR.
-- No backend, preserve a organização por domínio e as camadas `Controller -> Service -> Repository` definidas no ADR.
+- `EMPREST.AI/docs/PRD.md`: requisitos do produto.
+- `EMPREST.AI/docs/adr/001-stack.md`: arquitetura, stack, testes, operação e segurança.
+- `rules/spec-flow.md`: spec, plano e tasks.
+- `rules/check.md`: verificação antes de declarar tarefa concluída.
+- `rules/testing.md`: estratégia de testes por escopo.
+- `rules/migration.md`: procedimento de schema e migration.
+- `skills/`: skills adicionais do projeto.
+
+> Regra de precedência: a regra “o agente não cria commits nem pull requests” vale sobre qualquer outra instrução que sugira commit, push ou PR automáticos.
