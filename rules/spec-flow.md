@@ -132,3 +132,11 @@ tasks/
 Use um mesmo `<identificador>` curto e estável nos três arquivos. Preserve
 specs, planos e tasks de tarefas concluídas para manter o histórico de decisão
 e a rastreabilidade do produto.
+
+## Antes de declarar uma spec pronta
+
+- Delegue ao subagente verificador-spec (agents/verificador-spec.md),
+  passando o caminho da spec e o intervalo de commits.
+- A spec só é pronta com "Veredito: PRONTA". Qualquer outro resultado
+  volta para as tarefas — quem corrige é o agente principal, nunca o
+  verificador.

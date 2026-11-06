@@ -22,6 +22,15 @@
 - Para testes, siga `rules/testing.md`.
 - Para handoff de sessão, siga `rules/handoff.md` somente quando o usuário pedir explicitamente.
 
+## Subagentes
+
+- Ficam em agents/<nome>.md. O frontmatter diz quando delegar; o
+  corpo é a instrução completa do subagente.
+- Subagente não herda esta conversa: ao delegar, passe tudo que o
+  arquivo dele pede como entrada.
+- Se o harness não tiver subagentes, abra uma sessão nova e comece
+  com: "Aja conforme agents/<nome>.md." e as entradas pedidas.
+
 ## Referências do projeto
 
 - `EMPREST.AI/docs/PRD.md`: requisitos do produto.
