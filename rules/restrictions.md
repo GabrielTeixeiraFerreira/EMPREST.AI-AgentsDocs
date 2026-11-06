@@ -28,7 +28,6 @@
 - O agente pode preparar o diff localmente, mas só o usuário decide quando criar commit, push ou PR.
 - Não faça push na branch de produção.
 - Não rode deploy nem altere configuração da Vercel.
-- Não toque no projeto Supabase remoto.
 
 ## Precedência
 

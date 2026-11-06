@@ -1,0 +1,5 @@
+- [x] T-01 | Criar migration idempotente do catálogo | backend/prisma | CA-01 | `npm run db:validate` passou; reset local bloqueado por ambiente remoto
+- [ ] T-02 | Configurar seed do usuário e membership | backend/prisma/seed.ts | CA-02 | implementação concluída; execução depende de ambiente autorizado
+- [x] T-03 | Implementar login, sessão e catálogo protegido | backend/src | CA-03, CA-04 | build passou; testes específicos ainda pendentes
+- [x] T-04 | Integrar login e renderização do catálogo | frontend | CA-05 | `node --check script.js` passou
+- [ ] T-05 | Executar validação final | backend/frontend | CA-06 | build/testes passaram; reset e smoke test autenticado pendentes
