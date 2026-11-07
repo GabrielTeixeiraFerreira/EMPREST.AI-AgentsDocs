@@ -11,7 +11,8 @@
 ## Abordagem técnica
 
 Usar as variáveis já existentes: `VITE_API_URL` no build público e
-`CORS_ORIGIN` no runtime da API. Manter a função de CORS com lista explícita
+`CORS_ORIGIN` no runtime da API. Normalizar `VITE_API_URL` para garantir o
+prefixo `/v1` exatamente uma vez. Manter a função de CORS com lista explícita
 de origens, sem wildcard e sem fallback permissivo em produção.
 
 ## Ordem de execução

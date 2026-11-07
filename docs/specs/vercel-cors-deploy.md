@@ -26,7 +26,8 @@ origem do frontend publicado.
 ## Comportamento esperado
 
 - O build de produção do frontend usa
-  `https://emprestaiback.vercel.app/v1`.
+  `https://emprestaiback.vercel.app/v1` após normalizar a variável pública,
+  mesmo que ela tenha sido cadastrada sem o sufixo `/v1`.
 - O backend permite a origem `https://emprest-ai.vercel.app` por
   `CORS_ORIGIN`.
 - As origens locais continuam documentadas para desenvolvimento.
@@ -35,7 +36,8 @@ origem do frontend publicado.
 ## Critérios de aceitação
 
 - CA-01: exemplos e documentação do frontend orientam
-  `VITE_API_URL=https://emprestaiback.vercel.app/v1` para produção.
+  `VITE_API_URL=https://emprestaiback.vercel.app` para produção, e o frontend
+  acrescenta `/v1` quando necessário.
 - CA-02: exemplos e documentação do backend orientam
   `CORS_ORIGIN` com `https://emprest-ai.vercel.app`.
 - CA-03: a política de CORS continua recusando origens não configuradas em
