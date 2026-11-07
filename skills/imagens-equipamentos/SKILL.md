@@ -10,8 +10,9 @@ argument-hint: "Informe os equipamentos e, se disponível, a pasta de saída."
 
 Preparar um conjunto de fotos para os equipamentos do sistema, mantendo uma
 imagem diferente para cada equipamento e um registro auditável da origem.
-Esta skill pode preparar os arquivos e o manifesto local, mas não faz upload no
-Supabase Storage do deploy.
+Esta skill pode preparar os arquivos e o manifesto local e também consegue
+enviar os arquivos para o Supabase Storage do deploy quando essa ação for
+solicitada.
 
 ## Restrições obrigatórias
 
@@ -36,8 +37,9 @@ Supabase Storage do deploy.
   Pixabay, página da imagem, autor, URL usada, data de coleta e transformações.
 - A interface que exibe as fotos deve mostrar **“Fotos: Pixabay”** como link
   para `https://pixabay.com/pt/`, conforme as diretrizes da API.
-- O bucket de destino é público no Supabase Storage, mas a skill não tenta
-  autenticar, configurar o bucket ou enviar arquivos para o Supabase do deploy.
+- O bucket de destino é público no Supabase Storage. O upload, a configuração
+  do bucket e qualquer alteração no deploy exigem autorização explícita do
+  responsável e registro da evidência.
 
 ## Procedimento
 
@@ -61,9 +63,9 @@ Supabase Storage do deploy.
 7. Salvar o manifesto de créditos junto dos arquivos. O manifesto não deve
    conter a chave da API. Usar um formato já adotado pelo projeto; se não
    houver um, preferir JSON com uma entrada por equipamento.
-8. Entregar a pasta preparada para upload manual no bucket público, incluindo
-   uma lista clara de caminhos/URLs esperados após o upload. Não declarar que
-   o upload foi concluído.
+8. Se o responsável autorizar o envio, publicar os arquivos no bucket público e
+   registrar os caminhos/URLs resultantes. Sem autorização, entregar a pasta
+   preparada e a lista clara de caminhos esperados, sem declarar upload.
 9. Se houver alteração de tela ou contrato, aplicar o fluxo SDD do projeto e
    garantir o texto **“Fotos: Pixabay”** com link visível na tela de fotos.
 
